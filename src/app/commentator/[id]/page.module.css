@@ -1,7 +1,7 @@
  .container {
-  display: contents;
-  flex-direction: column;
-  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
 } 
 
 .top {
@@ -35,16 +35,6 @@
   border-radius: 50%;
 }
 
-.imageContainer {
-  flex: 1;
-  height: 300px;
-  position: relative;
-}
-
-.image {
-  object-fit: cover;
-}
-
 .content {
   margin-top: 50px;
   font-size: 20px;
@@ -58,6 +48,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 500px;
 }
 
 .input,
@@ -79,4 +70,13 @@
   border-radius: 5px;
   color: #eee;
   font-weight: bold;
+}
+.comment{
+  display: flex;
+  margin-top: 20px;
+  border: 1px solid white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: fit-content;
 }

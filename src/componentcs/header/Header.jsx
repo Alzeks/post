@@ -17,7 +17,6 @@ export default function Header() {
     signOut();
     
   }
-console.log('session',session);
   return (
     <div className={styles.container}>
       <Link href="/" className={styles.logo}>Posttask</Link>
@@ -28,7 +27,7 @@ console.log('session',session);
         {session.status === 'authenticated' && (
           <div>
             {
-               session?.data?.user[0].isAuthor ? < Link href={'/author'}>Author </Link> :
+               session?.data?.user[0]?.isAuthor ? < Link href={'/author'}>Author </Link> :
               //session?.data?.user.isAuthor ? < Link href={'/author'}>Author </Link> :
                 < Link href={'/commentator'}>Commentator </Link>
             }

@@ -22,6 +22,7 @@ export default function Home() {
   return (
     <div >
       Main Page
+      <div>React hook form in page Login</div>
     </div>
   )
 }

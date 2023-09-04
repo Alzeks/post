@@ -4,11 +4,10 @@ import { supabase } from "../../../supabase";
 export const GET = async (request) => {
 
   try {
-  let { data, error } = await supabase
-  .from('posts')
-  .select('*')
-  //.eq('title')
-    console.log('666666666666', data, error);
+    let { data, error } = await supabase
+      .from('posts')
+      .select('*')
+    
     return new NextResponse(JSON.stringify(data), { status: 200 });
     return new NextResponse(data, { status: 200 });
   } catch (err) {
@@ -18,7 +17,7 @@ export const GET = async (request) => {
 
 export const POST = async (request) => {
   const { title, author, context } = await request.json();
-  
+
   try {
     const { data, error } = await supabase.from('posts').insert([
       {

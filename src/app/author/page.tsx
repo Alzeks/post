@@ -20,7 +20,6 @@ const Dashboard = () => {
   useEffect(() => {
     const getData = async () => {
       setIsLoading(true);
-      //const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
         const res = await fetch("http://localhost:3000/api/posts", {
         cache: "no-store",
       });
@@ -102,7 +101,7 @@ const Dashboard = () => {
           <h1>Add New Post</h1>
           <input type="text" placeholder="Title" className={styles.input} />
           <input type="text" placeholder="Author" className={styles.input} />
-          <input type="text" placeholder="Image" className={styles.input} />
+          <input type="text" placeholder="Image url" className={styles.input} />
           <textarea
             placeholder="Content"
             className={styles.textArea}

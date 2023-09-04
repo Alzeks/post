@@ -1,8 +1,22 @@
 import { NextResponse } from "next/server";
 import { supabase } from "../../../supabase";
 
+
+export const getStaticPaths = async () => {
+  return {
+    paths: [
+      {
+        params: {
+          name: 'id',
+        },
+      }, // See the "paths" section below
+    ],
+    fallback: true, // false or "blocking"
+  }
+}
+
 export const GET = async (request) => {
-  
+ 
   try {
     const { data, error } = await supabase.from('comments').select().eq('post_id', '6')
 
@@ -23,7 +37,7 @@ export const POST = async (request) => {
         post_id
       }
     ])
-      
+
     return new NextResponse("Post has been created", { status: 201 });
   } catch (err) {
     return new NextResponse("Database Error", { status: 500 });
