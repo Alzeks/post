@@ -1,20 +1,6 @@
 import { NextResponse } from "next/server";
 import { supabase } from "../../../supabase";
 
-
-export const getStaticPaths = async () => {
-  return {
-    paths: [
-      {
-        params: {
-          name: 'id',
-        },
-      }, // See the "paths" section below
-    ],
-    fallback: true, // false or "blocking"
-  }
-}
-
 export const GET = async (request) => {
  
   try {

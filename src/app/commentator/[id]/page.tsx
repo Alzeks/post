@@ -17,7 +17,7 @@ const BlogPost: React.FC<IParams> = ({ params },{comments}) => {
   useEffect(() => {
     const getData = async () => {
 
-      const comment = await fetch(`/api/comments/${params.id}`, {
+      const comment = await fetch(`/api/comments/${params.id}?postId=${params.id}`, {
         cache: "no-store",
       });
 
