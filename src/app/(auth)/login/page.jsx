@@ -5,15 +5,10 @@ import { signIn, useSession, getProviders } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
-//import Email from "next-auth/providers/email";
-
-//interface props{url: string}
 
 const Login = ({ url }) => {
   const session = useSession();
   const router = useRouter();
-  //const params = useSearchParams();
-  //const [success, setSuccess] = useState("");
   const { register, formState: { errors }, handleSubmit } = useForm()
 console.log(session);
   if (session.status === "loading") {
@@ -74,6 +69,6 @@ console.log(session);
 
     </div>
   );
-};
+};              
 
 export default Login;
