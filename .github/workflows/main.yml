@@ -17,8 +17,8 @@ jobs:
     - name: depends 
       run: npm ci
       
-    - name: build  
-      run: next build 
+   # - name: build  
+    #  run: next build 
       
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
