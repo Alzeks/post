@@ -86,11 +86,11 @@ const BlogPost: React.FC<IParams> = ({ params },{comments}) => {
 
 export default BlogPost;
 
-export async function getStaticProps(){
-  let {data: comments, error} =await supabase.from('comments').select('*')
-  console.log(comments);
+// export async function getStaticProps(){
+//   let {data: comments, error} =await supabase.from('comments').select('*')
+//   console.log(comments);
   
-  return {
-    props: {comments: 8},
-  }
-}
+//   return {
+//     props: {comments: 8},
+//   }
+// }
